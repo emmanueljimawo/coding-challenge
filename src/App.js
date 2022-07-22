@@ -11,6 +11,7 @@ import "./App.css";
 const url = "https://api.themoviedb.org/3/movie/popular";
 const API_KEY = "d0f5f2e135336200362af8a1a73acb17";
 
+
 function App() {
   const { isloading, data } = ApiData(`${url}?api_key=${API_KEY}`);
   const [likedMovies, setLikedMovies] = useState([]);
@@ -36,7 +37,7 @@ function App() {
   ) : (
     <h4>Could not fetch data. Please try again later.</h4>
   );
-  const LikedPage = (
+  const LikedPage = likedMovies  ? (
     <MovieList
       data={likedMovies}
       title="Liked Movies"
@@ -44,6 +45,8 @@ function App() {
       handleUnlike={removeLikedMovie}
       likedMovies={likedMovies}
     />
+  ): (
+    <h4>No liked movies</h4>
   );
 
   return (
