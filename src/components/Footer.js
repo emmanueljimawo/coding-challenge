@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.css";
 
 function Footer() {
-    const year = new Date().getFullYear();
+  const year = new Date().getFullYear();
   return (
     <footer className="text-center py-4">
       <hr

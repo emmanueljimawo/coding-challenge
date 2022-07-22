@@ -40,12 +40,10 @@ function MovieCard(props) {
                     <i className="fas fa-heart fs-4 d-block"></i>
                   </span>
                 ) : (
-                    <span onClick={() => props.handleLike(props.movie)}>
-                  <i 
-                    className="far fa-heart fs-4 d-block"
-                    
-                  ></i>
-                 </span>)}
+                  <span onClick={() => props.handleLike(props.movie)}>
+                    <i className="far fa-heart fs-4 d-block"></i>
+                  </span>
+                )}
                 <i className="fas fa-share-alt-square fs-4 d-block"></i>
                 <i
                   className="fas fa-play-circle fs-4 d-block"
